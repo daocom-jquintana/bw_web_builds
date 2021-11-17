@@ -56,7 +56,7 @@ npm run dist:oss:selfhost
 
 # Create bwrs-version.json with the latest tag from the remote repo.
 printf '{"version":"%s"}' \
-      "$(git -c 'versionsort.suffix=-' ls-remote --tags --sort='v:refname' https://github.com/dani-garcia/bw_web_builds.git 'v*' | tail -n1 | sed -E 's#.*?refs/tags/v##')" \
+      "$(git -c 'versionsort.suffix=-' ls-remote --tags --sort='v:refname' https://github.com/daocom-jquintana/bw_web_builds 'v*' | tail -n1 | sed -E 's#.*?refs/tags/v##')" \
       > build/bwrs-version.json
 
 # Prepare the final archives
